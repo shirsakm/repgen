@@ -1,0 +1,34 @@
+html {
+    background-color: #222;
+    color: #EEE;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+#nav-logo {
+    font-size: 2rem;
+}
+
+.nav {
+    list-style: none;
+}
+
+.nav li {
+    padding: 1rem;
+    float: left;
+}
+
+.nav li:hover {
+    filter: brightness(80%);
+    -webkit-filter: brightness(80%);
+}
+
+h1 {
+    text-align: center;
+}
