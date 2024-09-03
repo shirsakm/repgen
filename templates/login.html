@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Login Page</h1>
+    <form action="/login" method="post">
+        <div>
+            <label for="institute">Name of Institute:</label>
+            <input type="text" id="institute" name="institute" required>
+        </div>
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <p>Select Login Method:</p>
+            <input type="radio" id="login-otp" name="login-method" value="otp" onclick="toggleLoginMethod()" checked>
+            <label for="login-otp">Login with OTP</label>
+            <input type="radio" id="login-password" name="login-method" value="password" onclick="toggleLoginMethod()">
+            <label for="login-password">Login with Password</label>
+        </div>
+        <div id="otp-section">
+            <div>
+                <label for="otp">Enter OTP:</label>
+                <input type="text" id="otp" name="otp" placeholder="Enter OTP">
+            </div>
+        </div>
+        <div id="password-section" style="display: none;">
+            <div>
+                <label for="password">Enter Password:</label>
+                <input type="password" id="password" name="password" placeholder="Enter Password">
+            </div>
+        </div>
+        <div>
+            <button type="submit">Login</button>
+        </div>
+    </form>
+
+<script>
+        function toggleLoginMethod() {
+            const otpSection = document.getElementById('otp-section');
+            const passwordSection = document.getElementById('password-section');
+            const loginMethod = document.querySelector('input[name="login-method"]:checked').value;
+
+            if (loginMethod === 'otp') {
+                otpSection.style.display = 'block';
+                passwordSection.style.display = 'none';
+            } else {
+                otpSection.style.display = 'none';
+                passwordSection.style.display = 'block';
+            }
+        }
+    </script>
+{% endblock content %}
