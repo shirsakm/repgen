@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        margin: 0;
+        background-color: #f4f4f4;
+        text-align: center;
+        color: #333;
+    ">
+        <div style="
+            max-width: 500px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        ">
+            <h1 style="margin-top: 0;">Join Us</h1>
+            <p>Please select your role:</p>
+            <form>
+                <div style="margin-bottom: 10px;">
+                    <input type="radio" id="faculty" name="role" value="faculty" style="margin-right: 10px;">
+                    <label for="faculty">Faculty</label>
+                </div>
+                <div style="margin-bottom: 10px;">
+                    <input type="radio" id="student" name="role" value="student" style="margin-right: 10px;">
+                    <label for="student">Student</label>
+                </div>
+                <div style="margin-bottom: 20px;">
+                    <input type="radio" id="admin" name="role" value="admin" style="margin-right: 10px;">
+                    <label for="admin">Admin</label>
+                </div>
+                <button type="button" onclick="redirectToJoinPage()" style="
+                    background-color: #007bff;
+                    color: #fff;
+                    border: none;
+                    padding: 10px 20px;
+                    border-radius: 5px;
+                    font-size: 1em;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                ">Join</button>
+            </form>
+        </div>
+    </div>
+  <script>
+        function redirectToJoinPage() {
+            const selectedOption = document.querySelector('input[name="role"]:checked');
+            if (selectedOption) {
+                const role = selectedOption.value;
+                window.location.href = `/${role}-join`;
+            } else {
+                alert('Please select an option before proceeding.');
+            }
+        }
+    </script>
+{% endblock content %}
