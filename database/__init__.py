@@ -10,6 +10,6 @@ def get_connection():
         host = os.getenv('PGHOST'),
         user = os.getenv('PGUSER'),
         password = os.getenv('PGPASSWORD'),
-        database = os.getenv('PGDATABASE'),
+        databgase = os.getenv('PGDATABASE'),
         port = os.getenv('PGPORT'),
     )
