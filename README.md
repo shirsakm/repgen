@@ -1,5 +1,17 @@
 # Repgen
 
+> [!NOTE]
+> This software was developed at HackHeritage 2024.
+
+A financial and academic anaylysis and prediction tool for academic institutions. _Repgen_ aids academic institutions in making the correct choices, by visualising and predicting future reports based on existing data. It aims to revolutionize the game for institutions, by eliminating the hassle of piecing puzzle pieces of software into one coherent structure. _Repgen_ is not just a software, it is an _experience_.
+
+## Features
+
+- [x] An intuitive, user-friendly interface
+- [x] End-to-end data encryption
+- [x] AI-based financial data analysis
+- [ ] AI-based academic analysis
+
 ## How to Contribute
 
 ### Setting up
